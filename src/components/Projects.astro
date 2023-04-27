@@ -1,0 +1,86 @@
+---
+import Grid from '../components/Grid.astro';
+import Icon from './Icon.astro';
+---
+
+<section class="box items">
+    <Grid variant="offset">
+        <div class="stack gap-2 lg:gap-4">
+            <img
+                alt="Spotify Quiz Image"
+                src="/assets/quiz.jpg"
+            />
+            <h2>Spotify Quiz</h2>
+            <p>Utilized Spotify API to create a trivia guessing game using NextJS hosted on Vercel.</p>
+            <div style="display: flex">
+                <a href='https://github.com/spotify-quiz/spotify-quiz'>
+                    <span class="sr-only">GitHub Link</span>
+                    <Icon icon="github-logo2" color="var(--accent-regular)" size="2.0rem" gradient />
+                </a>
+                <a href='https://spotify-quiz-silk.vercel.app/'>
+                    <span class="sr-only">Deployed Website</span>
+                    <Icon icon="link" color="var(--accent-regular)" size="2.0rem" gradient />
+                </a>
+            </div>
+        </div>
+
+        <div class="stack gap-2 lg:gap-4">
+            <img
+                alt="Novel Reader Image"
+                src="/assets/novel.jpg"
+            />
+            <h2>Novel Reader</h2>
+            <p> 
+                A complete content management system where users can write and share novel of their own.
+                Completes with common features such as search, tags, views.
+                Made using Flask with MySQL as a database.
+            </p>
+            <div style="display: flex">
+                <a href='https://github.com/fordkuppp/novel-reader'>
+                    <span class="sr-only">GitHub Link</span>
+                    <Icon icon="github-logo2" color="var(--accent-regular)" size="2.0rem" gradient />
+                </a>
+                <a href='http://novel.fordkuppp.me/'>
+                    <span class="sr-only">Deployed Website</span>
+                    <Icon icon="link" color="var(--accent-regular)" size="2.0rem" gradient />
+                </a>
+            </div>
+        </div>
+    </Grid>
+</section>
+
+<style>
+	.box {
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+	}
+
+	.items {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.items h2 {
+		font-size: var(--text-lg);
+	}
+
+	.items p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			padding: 2.5rem;
+		}
+
+		.items {
+			display: flex;
+			gap: 5rem;
+		}
+
+		.items h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
